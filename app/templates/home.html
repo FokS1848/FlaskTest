@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <h1>{{ name }}</h1>
-    <h6>{{ text }}</h6>
-    <p>This paragraph</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <form>
+        <h3>Hello, {{ current_user.username }}</h3>
+        <h3>Your email - {{ current_user.email }}</h3>
+        <h3>Your password - {{ current_user.password }}</h3>
+        {% for i in a %}
+        <h3>{{ i.title }} <a href="/post/{{ i.id }}">Go</a> <a href="/update/{{ i.id }}">Update</a> <a href="/del_post/{{ i.id }}">Delte</a></h3>
+        {% endfor %}
+    </form>
+{% endblock %}

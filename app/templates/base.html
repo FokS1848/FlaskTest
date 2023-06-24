@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="/static/styles/home.css" rel="stylesheet">
 </head>
 <body>
-$END$
+    <div>
+        <a href="/">Home</a>
+        <a href="/registration">Registration</a>
+        <a href="/login">Login</a>
+        <a href="/blog">Blog</a>
+        <a href="/change">Change Info</a>
+    </div>
+    <hr>
+    {% block content %} {% endblock %}
+
 </body>
 </html>
